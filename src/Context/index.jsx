@@ -38,7 +38,7 @@ export const ShoppingCartProvider = ({ children }) => {
   const [searchByCategory, setSearchByCategory] = useState(null);
 
   useEffect(() => {
-    fetch("https://fake-store-api.mock.beeceptor.com/api/products")
+    fetch('../products.json')
       .then((response) => response.json())
       .then((data) => setItems(data));
   }, []);

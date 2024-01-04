@@ -11,7 +11,7 @@ const CheckoutSideMenu = () => {
 
   const handleDelete = (id) => {
     const filteredProducts = context.cartProducts.filter(
-      (product) => product.product_id != id
+      (product) => product.id != id
     );
     context.setCartProducts(filteredProducts);
   };
@@ -21,7 +21,7 @@ const CheckoutSideMenu = () => {
       date: 'hora',
       products: context.cartProducts,
       totalProducts: context.cartProducts.length,
-      totalPrice: totalPrice(context.cartProducts),
+      totalPrice:  totalPrice(context.cartProducts),
     };
 
     context.setOrder([...context.order, orderToAdd]);
@@ -47,8 +47,8 @@ const CheckoutSideMenu = () => {
       <div className=" px-6 overflow-y-scroll flex-1">
         {context.cartProducts.map((product) => (
           <OrderCard
-            key={product.product_id}
-            id={product.product_id}
+            key={product.id}
+            id={product.id}
             name={product.name}
             imageUrl={product.image}
             price={product.price}

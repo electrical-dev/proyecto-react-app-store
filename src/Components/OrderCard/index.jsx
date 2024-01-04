@@ -11,15 +11,15 @@ const OrderCard = props => {
     }
 
     return (
-    <div className=" flex justify-between items-center mb-3">
+    <div className=" flex justify-between items-center mb-3 w-auto">
         <div className=" flex items-center gap-2">
             <figure className=" w-20 h-20">
             <img className=" w-full h-full rounded-lg object-cover" src={imageUrl} alt={name} />
             </figure>
             <p className="text-sm font-light">{name}</p>
         </div>
-        <div className=" flex items-center gap-2">
-            <p className=" text-lg font-medium"> {price}</p>
+        <div className=" flex items-center gap-3">
+            <p className=" text-lg font-medium"> ${price}</p>
             {renderGoTrash}
         </div>
         

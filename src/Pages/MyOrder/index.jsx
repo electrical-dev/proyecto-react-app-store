@@ -19,11 +19,11 @@ function MyOrder() {
         </Link>
         <h1 className=" text-lg font-bold text-blue-800">My Order</h1>
       </div>
-      <div className=" flex flex-col w-100">
+      <div className=" flex-col items-center justify-cente relative w-80 ">
         {context.order?.[index]?.products.map(product => (
           <OrderCard
-            key={product.product_id}
-            id={product.product_id}
+            key={product.id}
+            id={product.id}
             name={product.name}
             imageUrl={product.image}
             price={product.price}
